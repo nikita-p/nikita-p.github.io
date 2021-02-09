@@ -1,0 +1,132 @@
+.footer a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+  transition-duration: 0s;
+}
+
+.footer a:hover{
+  color: whitesmoke;
+}
+
+.table-wrap {
+  text-align: center;
+  display: inline-block;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 2rem 2rem;
+  color: #000;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 200px;
+  color: #0B2433;
+}
+
+form {
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px;
+}
+
+form input {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	border-radius: 20px 0px 0px 20px;
+  height: 35px;
+  font-size: 16px;
+	padding: 15px;
+	margin: 0;
+	border: 50px;
+	text-align: left;
+  background-color: #32101121;
+}
+
+form input:focus{
+  background-color: #32101105;
+}
+
+form button {
+	height: 35px;
+  font-size: 16px;
+	border-radius: 0px 20px 20px 0px;
+	width: 15%;
+	font-weight: 300;
+	font-family: Roboto;
+	margin: 0;
+	border: 0;
+	min-width: 65px;
+  background-color: #32101141;
+  transition-duration: 0.5s;
+}
+
+form button:hover {
+  background-color: #225D80;
+}
+ 
+table {
+  border: 1px solid #ccc;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  margin:0;
+  padding:0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ 
+table tr {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+ 
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+ 
+table th {
+  color: #fff;
+  background-color: #444;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+
+@media screen and (max-width: 700px) {
+  table {
+    border: 0;
+  }
+  table thead {
+    display: none;
+  }
+  table tr {
+    margin-bottom: 10px;
+    display: block;
+    border-bottom: 2px solid #ddd;
+  }
+  table td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    border-bottom: 1px dotted #ccc;
+    border-right: 1px solid transparent;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
