@@ -177,34 +177,119 @@
 						<img src="assets/cmd1202/x1.png" style="height: auto; width: auto;">
 					</div>
 				</section>
+				<section data-auto-animate>
+					<h3>Критерии отбора событий</h3>
+					<div style="display: block; width: 50%; float: left; height: auto; font-size:0.7em;">
+						<img src="assets/cmd1202/mp_x1x2.png" style="height: auto; width: auto;">
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/x12.png" style="height: auto; width: auto;">
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Критерии отбора событий</h3>
+					<p>Показать что-то с мультиадронным генератором</p>
+				</section>
 			</section>
 			<section data-auto-animate>
-				<h3>Определение числа событий</h3>
-				<p>Фиты</p>
+				<section data-auto-animate>
+					<h3>Определение числа событий</h3>
+					<p>Аппроксимация распределений по x1 производилась функцией:
+						\[f \sim N_{sig} \cdot \text{cruijff}(x, m, sL, sR, aL, aR) + N_{bkg} \cdot \text{linear}(x, y0,
+						dy)\]
+					</p>
+					<div style="display: block; width: 50%; float: left; height: auto; font-size:0.7em;">
+						<img src="assets/cmd1202/mc_800_19.png" style="height: auto; width: auto;">
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/exp_800_19.png" style="height: auto; width: auto;">
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Определение числа событий</h3>
+					<p>Определение функций аппроксимации: </p>
+					<p>\[
+						\text{cruijff}(x, m, s_L, s_R, a_L, a_R) = \begin{cases}
+						\exp{\big(\frac{(x-m)^2}{2( s_L^2 + a_L (x-m)^2)}\big)}, x &lt; m\\
+						\exp{\big(\frac{(x-m)^2}{2( s_R^2 + a_R (x-m)^2)}\big)}, x \geq m
+						\end{cases} \]</p>
+					<p>\[ \text{linear}(x, y_0, dy) = y_0 + dy \frac{x - x_0}{x_1 - x_0} \]</p>
+				</section>
+				<section data-auto-animate>
+					<h3>Определение числа событий</h3>
+					<p style="font-size:0.7em;">Пример аппроксимации для HIGH19, 912.5 MeV</p>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd1202/mc_912.5_19.png" style="height: auto; width: auto;">
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/exp_912.5_19.png" style="height: auto; width: auto;">
+					</div>
+				</section>
 			</section>
 			<section data-auto-animate>
 				<h3>Эффективность триггеров</h3>
-				<p>Картинки с триггерами</p>
+				<div style="display: block; width: 30%; float: left; height: auto; font-size:0.7em;">
+					<p>\[ \varepsilon_{trig} = 1 - (1- \varepsilon_{TF}) (1 - \varepsilon_{CF}) \]</p>
+					<p>\[ \varepsilon_{TF} = \frac{N_{TF\&CF} + 1}{N_{CF} + N_{TF\&CF} + 2} \]</p>
+					<p>\[ \varepsilon_{CF} = \frac{N_{TF\&CF} + 1}{N_{TF} + N_{TF\&CF} + 2} \]</p>
+				</div>
+				<div style=" display: block; width: 70%;  height: auto; float: right;">
+					<img src="assets/cmd1202/trigs.png" style="height: auto; width: auto;">
+				</div>
 			</section>
 			<section data-auto-animate>
 				<h3>Эффективность регистрации</h3>
-				<p>Картинки с триггерами</p>
-			</section>
-			<section data-auto-animate>
-				<h3>Рад. поправки</h3>
-				<p>Картинки с триггерами</p>
+				<div>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd1202/reg_800_19.png" style="height: auto; width: auto;">
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/effreg.png" style="height: auto; width: auto;">
+					</div>
+				</div>
+				<p style=" font-size:0.7em;">Определяется и аппроксимируется эффективность регистрации в зависимости от
+					энергии радиационного
+					фотона </p>
 			</section>
 			<section data-auto-animate>
 				<h3>Поправка на эффективность ДК</h3>
-				<p>Картинки с триггерами</p>
+				<div style="display: block; width: 50%; float: left; height: auto;">
+				</div>
+				<div style=" display: block; width: 50%;  height: auto; float: right;">
+					<img src="assets/cmd1202/dccorr.png" style="height: auto; width: auto;">
+				</div>
 			</section>
+			<section data-auto-animate>
+				<h3>Рад. поправки</h3>
+				<p style=" font-size:0.7em;">Радиационная поправка определяется по
+					формуле:
+					\[ \sigma_{vis} = \int_0^1 F(x, s) \sigma_{born} (s [1-x]) \varepsilon_{reg}(x,s)dx = \sigma_{born}
+					\varepsilon (1+\delta) \]
+				</p>
+
+				<div style="display: block; width: 50%; float: left; height: auto;">
+					<img src="assets/cmd1202/effreg.png" style="height: auto; width: auto;">
+				</div>
+				<div style=" display: block; width: 50%;  height: auto; float: right;">
+					<img src="assets/cmd1202/rad.png" style="height: auto; width: auto;">
+				</div>
+			</section>
+
 			<section data-auto-animate>
 				<h3>Сечение процесса</h3>
 				<p>Картинки с триггерами</p>
 			</section>
 			<section data-auto-animate>
 				<h3>Будущие планы</h3>
-				<p>Картинки с триггерами</p>
+				<ul>
+					<li>Разработать критерии отбора</li>
+					<li>Вычислить эффективности регистрации, триггеров, рад. поправку</li>
+					<li>Определить поправку на эффективность ДК</li>
+					<hr>
+					<li>Определить систематические ошибки</li>
+					<li>Представить результаты работы на конференциях</li>
+					<li>Написать статью</li>
+				</ul>
 			</section>
 
 		</div>
