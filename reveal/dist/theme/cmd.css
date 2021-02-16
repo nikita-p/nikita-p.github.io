@@ -261,7 +261,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
 .reveal a {
   color: #D9C384;
-  text-decoration: none;
+  /* text-decoration: none; */
   transition: color .15s ease; }
 
 .reveal a:hover {
