@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 a{
@@ -35,7 +35,7 @@ h1{
     color: white;
     font-style: normal;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 900;
     font-size: 80px;
 }
 
@@ -49,10 +49,11 @@ h3{
 
 body{
     max-width: 2200px;
+	min-width: 250px;
     background-color: white;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .img-circle {
@@ -74,7 +75,8 @@ body{
     align-items: center;
     width: 100%;
     /* background: linear-gradient(6deg, white 20%, transparent 100%), url(../sources/ras.png) no-repeat; */
-    background: url(../sources/ras2.png) no-repeat right top;
+    /* background: url(../sources/ras2.png) no-repeat right top; */
+	background: linear-gradient(to right, #321011, 80%, transparent), url("../sources/drawing.svg"), #321011 no-repeat right top;
     background-attachment: fixed;
     background-size: cover;
     height: 500px;
@@ -88,6 +90,7 @@ body{
     min-width: 200px;
     width: 50%;
     text-align: center;
+	padding-left: 20px;
 }
 
 .main{
