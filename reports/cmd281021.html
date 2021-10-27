@@ -326,7 +326,7 @@
                     <h3>Критерии отбора событий</h3>
                     <div style="display: block; width: 30%; float: left; height: auto; padding-top: 50px;">
                         <p style="text-align: left; font-size:0.6em; ">
-                            С помощью MC Toy показываю, что между вычисленной инв. массой и импульсом будет корреляция:
+                            С помощью MC Toy показываю, что между вычисленной инв. массой и импульсом может быть корреляция:
                             <br>
                             $$M_K^2 = 2 M_{\pi}^2 + 2 ( \epsilon_+ \epsilon_- - p_+ p_- \cos\psi ) $$
                             
@@ -341,78 +341,216 @@
                 </section>
 			</section>
             
-            
-			<section>
-				<section data-auto-animate data-visibility="uncounted">
-					<h3>Критерии отбора событий</h3>
-					<div
-						style="display: block; width: 50%; float: left; height: auto; font-size:0.7em; padding-top: 50px;">
-						<p style="text-align: left; font-size:0.9em; ">Для отобранных событий строю распределение по
-							инв. массе K<sub>S</sub> в зависимости от импульса K<sub>S</sub>, а затем поворачиваю на
-							"угол корреляции".</p>
-						<p style="text-align: left; font-size:0.9em; padding-top: 20px;">Это позволяет взять наибольшее
-							количество сигнальных событий, отделить упругие события от событий
-							с возвращением на резонанс и фоновых событий с K<sub>S</sub>, таких как K<sub>S</sub>Kπ,
-							K<sub>S</sub>Kππ<sup>0</sup>, K<sub>S</sub>K<sub>L</sub>π<sup>0</sup>π<sup>0</sup> </p>
-					</div>
-					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd1202/mp_x1x2.png" style="height: auto; width: auto;">
-					</div>
-				</section>
-				<section data-auto-animate data-visibility="uncounted">
-					<h3>Критерии отбора событий</h3>
-					<div style="display: block; width: 50%; float: left; height: auto; font-size:0.7em;">
-						<img src="assets/cmd1202/mp_x1x2.png" style="height: auto; width: auto;">
-					</div>
-					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd1202/x1.png" style="height: auto; width: auto;">
-					</div>
-				</section>
-				<section data-auto-animate data-visibility="uncounted">
-					<h3>Критерии отбора событий</h3>
-					<div style="display: block; width: 50%; float: left; height: auto; font-size:0.7em;">
-						<img src="assets/cmd1202/mp_x1x2.png" style="height: auto; width: auto;">
-					</div>
-					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd1202/x12.png" style="height: auto; width: auto;">
-					</div>
-				</section>
-			</section>
 			<section data-auto-animate>
 				<section data-auto-animate>
 					<h3>Определение числа событий</h3>
-					<p>Аппроксимация распределений по x1 производилась функцией:
-						\[f \sim N_{sig} \cdot \text{cruijff}(x, m, sL, sR, aL, aR) + N_{bkg} \cdot \text{linear}(x, y0,
-						dy)\]
+					<p style="font-size: 0.7em;">Распределения событий по x1 аппроксимировал функцией:
+						<span style="font-size: 1.1em;">
+						\[f \sim N_{sig} \cdot \text{cruijff}(x, m, sL, sR, aL, aR) + N_{bkg} \cdot \text{poly2}(x, b, c)\]</span>
 					</p>
-					<div style="display: block; width: 50%; float: left; height: auto; font-size:0.7em;">
-						<img src="assets/cmd1202/mc_800_19.png" style="height: auto; width: auto;">
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/dist/exp_537.5_70914.png" style="height: auto; width: 85%;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в эксп. (HIGH19, 537.5 MeV) по x1.
+							Показана аппроксимация сигнал + фон (сплошная лин.) и отдельно фон (пунктирн.)
+                            </p>
+                        </div>
 					</div>
 					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd1202/exp_800_19.png" style="height: auto; width: auto;">
+						<img src="assets/cmd281021/dist/total_537.5_70914.png" style="height: auto; width: 85%;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в эксп. (HIGH19, 537.5 MeV) по x1.
+							Показан вклад сигнала (согласно MCGPJ MC) и фона (multihadrons gen)
+                            </p>
+                        </div>
 					</div>
 				</section>
 				<section data-auto-animate data-visibility="uncounted">
 					<h3>Определение числа событий</h3>
-					<p>Определение функций аппроксимации: </p>
+					<p>Функция аппроксимации:</p>
 					<p>\[
-						\text{cruijff}(x, m, s_L, s_R, a_L, a_R) = \begin{cases}
+						\text{cruijff}(x, m, s_L, s_R, a_L, a_R) \sim \begin{cases}
 						\exp{\big(\frac{(x-m)^2}{2( s_L^2 + a_L (x-m)^2)}\big)}, x &lt; m\\
 						\exp{\big(\frac{(x-m)^2}{2( s_R^2 + a_R (x-m)^2)}\big)}, x \geq m
 						\end{cases} \]</p>
-					<p>\[ \text{linear}(x, y_0, dy) = y_0 + dy \frac{x - x_0}{x_1 - x_0} \]</p>
+					<p>\[ \text{poly2}(x, b, c) \sim 1 + b \cdot x + c \cdot (3x^2 -1)/2  \]</p>
 				</section>
 				<section data-auto-animate data-visibility="uncounted">
 					<h3>Определение числа событий</h3>
-					<p style="font-size:0.7em;">Пример аппроксимации для HIGH19, 912.5 MeV</p>
+					<p style="font-size:0.7em;">Аппроксимация MC для HIGH19, <b>537.5 MeV</b></p>
 					<div style="display: block; width: 50%; float: left; height: auto;">
-						<img src="assets/cmd1202/mc_912.5_19.png" style="height: auto; width: auto;">
+						<img src="assets/cmd281021/dist/mc_537.5_70914.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в <b>MC K<sub>S</sub>K<sub>L</sub></b> (HIGH19,&nbsp;537.5&nbsp;MeV, MCGPJ) по x1 и аппроксимация.
+                            </p>
+                        </div>
 					</div>
 					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd1202/exp_912.5_19.png" style="height: auto; width: auto;">
+						<img src="assets/cmd281021/dist/mlt_bkg_537.5_70914.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в MC <b>фон</b> (HIGH19,&nbsp;537.5&nbsp;MeV, multihadrons) по x1 и аппроксимация.
+                            </p>
+                        </div>
 					</div>
 				</section>
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Определение числа событий</h3>
+					<p style="font-size:0.7em;">Аппроксимация exp для HIGH19, <b>537.5 MeV</b></p>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/dist/exp_537.5_70914.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в&nbsp;<b>эксперименте</b> (HIGH19,&nbsp;537.5 MeV, MCGPJ) по&nbsp;x1 и&nbsp;аппроксимация.
+							Сигнал&nbsp;+&nbsp;фон&nbsp;—&nbsp;сплошная линия; фон&nbsp;—&nbsp;пунктирная&nbsp;линия.
+                            </p>
+                        </div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/dist/total_537.5_70914.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в&nbsp;<b>эксперименте</b> (HIGH19,&nbsp;537.5 MeV, MCGPJ) по&nbsp;x1.
+							Показан вклад сигнала (согласно MCGPJ MC KSKL) и фона (multihadrons gen).
+                            </p>
+                        </div>
+					</div>
+				</section>
+				
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Определение числа событий</h3>
+					<p style="font-size:0.7em;">Аппроксимация MC для HIGH19, <b>650 MeV</b></p>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/dist/mc_650_73374.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в <b>MC K<sub>S</sub>K<sub>L</sub></b> (HIGH19,&nbsp;650&nbsp;MeV, MCGPJ) по x1 и аппроксимация.
+                            </p>
+                        </div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/dist/mlt_bkg_650_73374.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в MC <b>фон</b> (HIGH19,&nbsp;650&nbsp;MeV, multihadrons) по x1 и аппроксимация.
+                            </p>
+                        </div>
+					</div>
+				</section>
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Определение числа событий</h3>
+					<p style="font-size:0.7em;">Аппроксимация exp для HIGH19, <b>650&nbsp;MeV</b></p>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/dist/exp_650_73374.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в&nbsp;<b>эксперименте</b> (HIGH19,&nbsp;650&nbsp;MeV, MCGPJ) по&nbsp;x1 и&nbsp;аппроксимация.
+							Сигнал&nbsp;+&nbsp;фон&nbsp;—&nbsp;сплошная линия; фон&nbsp;—&nbsp;пунктирная&nbsp;линия.
+                            </p>
+                        </div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/dist/total_650_73374.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в&nbsp;<b>эксперименте</b> (HIGH19,&nbsp;650 MeV, MCGPJ) по&nbsp;x1.
+							Показан вклад сигнала (согласно MCGPJ MC KSKL) и фона (multihadrons gen).
+                            </p>
+                        </div>
+					</div>
+				</section>
+				
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Определение числа событий</h3>
+					<p style="font-size:0.7em;">Аппроксимация MC для HIGH19, <b>800 MeV</b></p>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/dist/mc_800_76450.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в <b>MC K<sub>S</sub>K<sub>L</sub></b> (HIGH19,&nbsp;800&nbsp;MeV, MCGPJ) по x1 и аппроксимация.
+                            </p>
+                        </div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/dist/mlt_bkg_800_76450.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в MC <b>фон</b> (HIGH19,&nbsp;800&nbsp;MeV, multihadrons) по x1 и аппроксимация.
+                            </p>
+                        </div>
+					</div>
+				</section>
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Определение числа событий</h3>
+					<p style="font-size:0.7em;">Аппроксимация exp для HIGH19, <b>800&nbsp;MeV</b></p>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/dist/exp_800_76450.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в&nbsp;<b>эксперименте</b> (HIGH19,&nbsp;800&nbsp;MeV, MCGPJ) по&nbsp;x1 и&nbsp;аппроксимация.
+							Сигнал&nbsp;+&nbsp;фон&nbsp;—&nbsp;сплошная линия; фон&nbsp;—&nbsp;пунктирная&nbsp;линия.
+                            </p>
+                        </div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/dist/total_800_76450.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в&nbsp;<b>эксперименте</b> (HIGH19,&nbsp;800 MeV, MCGPJ) по&nbsp;x1.
+							Показан вклад сигнала (согласно MCGPJ MC KSKL) и фона (multihadrons gen).
+                            </p>
+                        </div>
+					</div>
+				</section>
+				
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Определение числа событий</h3>
+					<p style="font-size:0.7em;">Аппроксимация MC для HIGH19, <b>936 MeV</b></p>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/dist/mc_936_79212.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в <b>MC K<sub>S</sub>K<sub>L</sub></b> (HIGH19,&nbsp;936&nbsp;MeV, MCGPJ) по x1 и аппроксимация.
+                            </p>
+                        </div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/dist/mlt_bkg_936_79212.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в MC <b>фон</b> (HIGH19,&nbsp;936&nbsp;MeV, multihadrons) по x1 и аппроксимация.
+                            </p>
+                        </div>
+					</div>
+				</section>
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Определение числа событий</h3>
+					<p style="font-size:0.7em;">Аппроксимация exp для HIGH19, <b>936&nbsp;MeV</b></p>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/dist/exp_936_79212.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в&nbsp;<b>эксперименте</b> (HIGH19,&nbsp;936&nbsp;MeV, MCGPJ) по&nbsp;x1 и&nbsp;аппроксимация.
+							Сигнал&nbsp;+&nbsp;фон&nbsp;—&nbsp;сплошная линия; фон&nbsp;—&nbsp;пунктирная&nbsp;линия.
+                            </p>
+                        </div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/dist/total_936_79212.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+							Распределение событий в&nbsp;<b>эксперименте</b> (HIGH19,&nbsp;936&nbsp;MeV, MCGPJ) по&nbsp;x1.
+							Показан вклад сигнала (согласно MCGPJ MC KSKL) и фона (multihadrons gen).
+                            </p>
+                        </div>
+					</div>
+				</section>
+				
 			</section>
+				
 			<section data-auto-animate>
 				<h3>Эффективность триггеров</h3>
 				<div style="display: block; width: 30%; float: left; height: auto; font-size:0.7em;">
@@ -424,45 +562,38 @@
 					<img src="assets/cmd1202/trigs.png" style="height: auto; width: auto;">
 				</div>
 			</section>
+			
 			<section data-auto-animate>
-				<h3>Эффективность регистрации</h3>
-				<div>
-					<div style="display: block; width: 50%; float: left; height: auto;">
-						<img src="assets/cmd1202/reg_800_19.png" style="height: auto; width: auto;">
-					</div>
-					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd1202/effreg.png" style="height: auto; width: auto;">
-					</div>
-				</div>
-				<p style="font-size:0.7em;">Определяется и аппроксимируется эффективность регистрации в зависимости от
-					энергии радиационного
-					фотона </p>
-			</section>
-			<section>
 				<section data-auto-animate>
-					<h3>Поправка на эффективность ДК</h3>
-					<div style="display: block; width: 50%; float: left; height: auto;">
-						<p style=" font-size:0.7em; padding-top: 40px;">
-							Для определения поправки на эффективность ДК отбирались события с одним треком, летящим
-							ортогонально ДК, и сравнивались распределения по угловому распределению второго трека.
-						</p>
+					<h3>Эффективность регистрации</h3>
+					<div>
+						<div style="display: block; width: 50%; float: left; height: auto;">
+							<img src="assets/cmd281021/regeff/537.5_70914.png" style="height: auto; width: auto;">
+						</div>
+						<div style=" display: block; width: 50%;  height: auto; float: right;">
+							<img src="assets/cmd281021/regeff/650_73374.png" style="height: auto; width: auto;">
+						</div>
 					</div>
-					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd1202/dccorr.png" style="height: auto; width: auto;">
-					</div>
+					<p style="font-size:0.7em;">
+					Определяю и аппроксимирую эффективность регистрации 
+					в зависимости от энергии радиационного фотона (использую MC KSKL с равномерно распр. рад. фотоном)</p>
 				</section>
-				<section data-auto-animate>
-					<h3>Поправка на эффективность ДК</h3>
-					<div style="display: block; width: 50%; float: left; height: auto;">
-						<img src="assets/cmd1202/pi_th_17.png" style="height: auto; width: auto;">
-						<p style=" font-size:0.7em;">HIGH17</p>
+				<section data-auto-animate  data-visibility="uncounted">
+					<h3>Эффективность регистрации</h3>
+					<div>
+						<div style="display: block; width: 50%; float: left; height: auto;">
+							<img src="assets/cmd281021/regeff/800_76450.png" style="height: auto; width: auto;">
+						</div>
+						<div style=" display: block; width: 50%;  height: auto; float: right;">
+							<img src="assets/cmd281021/regeff/936_79212.png" style="height: auto; width: auto;">
+						</div>
 					</div>
-					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd1202/pi_th_19.png" style="height: auto; width: auto;">
-						<p style=" font-size:0.7em;">HIGH19</p>
-					</div>
+					<p style="font-size:0.7em;">
+					Определяю и аппроксимирую эффективность регистрации 
+					в зависимости от энергии радиационного фотона (использую MC KSKL с равномерно распр. рад. фотоном)</p>
 				</section>
 			</section>
+
 			<section data-auto-animate>
 				<h3>Рад. поправки</h3>
 				<p style="font-size:0.7em;">Радиационная поправка определяется по формуле:
@@ -471,12 +602,129 @@
 				</p>
 
 				<div style="display: block; width: 50%; float: left; height: auto;">
-					<img src="assets/cmd1202/effreg.png" style="height: auto; width: auto;">
+					<img src="assets/cmd281021/regeff/total_regeff.png" style="height: auto; width: 90%;">
+					<div style="width: 80%; margin: auto;">
+						<p style="text-align: center; font-size:0.5em;">
+						Эффективность регистрации для&nbsp;рад.фотона с&nbsp;нулевой энергией в&nbsp;зависимости
+						от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам
+						</p>
+					</div>
 				</div>
 				<div style=" display: block; width: 50%;  height: auto; float: right;">
-					<img src="assets/cmd1202/rad.png" style="height: auto; width: auto;">
+					<img src="assets/cmd281021/other/radcors.png" style="height: auto; width: 90%;">
+					<div style="width: 80%; margin: auto;">
+						<p style="text-align: center; font-size:0.5em;">
+						Рад.поправка в&nbsp;зависимости
+						от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам
+						</p>
+					</div>
 				</div>
 			</section>
+
+			<section>
+				<section data-auto-animate>
+					<h3>Поправка на эффективность ДК</h3>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<p style=" font-size:0.7em; padding-top: 40px;">
+							Для определения поправки на эффективность ДК я отбирал события с одним треком, летящим
+							ортогонально ДК (π/2&nbsp;-&nbsp;0.3&nbsp;&lt;&nbsp;θ&nbsp;&lt;&nbsp;π/2&nbsp;+&nbsp;0.3) и сравнивал распределения второго трека по углам и импульсам в эксперименте и MC.
+						</p>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/other/dccorrHIGH11_ratio.svg" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+							<p style="text-align: center; font-size:0.5em;">
+							Поправка на&nbsp;эффективность&nbsp;ДК в&nbsp;зависимости от&nbsp;полярного угла
+							в&nbsp;сезоне HIGH11
+							</p>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Поправка на эффективность ДК</h3>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/other/dccorrHIGH11.svg" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+							<p style="text-align: center; font-size:0.5em;">
+							Распределение событий по&nbsp;полярному углу второго трека в&nbsp;эксперименте и MC (HIGH11).
+							Количество событий отнормировано на&nbsp;область между чёрными линиями.
+							</p>
+						</div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/other/dccorrHIGH11_mom.svg" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+							<p style="text-align: center; font-size:0.5em;">
+							Распределение событий по&nbsp;импульсу второго трека в&nbsp;эксперименте и MC (HIGH11).
+							</p>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Поправка на эффективность ДК</h3>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/other/dccorrHIGH19.svg" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+							<p style="text-align: center; font-size:0.5em;">
+							Распределение событий по&nbsp;полярному углу второго трека в&nbsp;эксперименте и MC (HIGH19).
+							Количество событий отнормировано на&nbsp;область между чёрными линиями.
+							</p>
+						</div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/other/dccorrHIGH19_ratio.svg" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+							<p style="text-align: center; font-size:0.5em;">
+							Поправка на&nbsp;эффективность&nbsp;ДК в&nbsp;зависимости от&nbsp;полярного угла
+							в&nbsp;сезоне HIGH19.
+							</p>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Поправка на эффективность ДК</h3>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/other/dccorrHIGH17.svg" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+							<p style="text-align: center; font-size:0.5em;">
+							Распределение событий по&nbsp;полярному углу второго трека в&nbsp;эксперименте и MC (HIGH17).
+							Количество событий отнормировано на&nbsp;область между чёрными линиями.
+							</p>
+						</div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/other/dccorrHIGH17_ratio.svg" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+							<p style="text-align: center; font-size:0.5em;">
+							Поправка на&nbsp;эффективность&nbsp;ДК в&nbsp;зависимости от&nbsp;полярного угла
+							в&nbsp;сезоне HIGH17.
+							</p>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Поправка на эффективность ДК</h3>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd281021/other/dccorrHIGH12.svg" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+							<p style="text-align: center; font-size:0.5em;">
+							Распределение событий по&nbsp;полярному углу второго трека в&nbsp;эксперименте и MC (HIGH12).
+							Количество событий отнормировано на&nbsp;область между чёрными линиями.
+							</p>
+						</div>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd281021/other/dccorrHIGH12_ratio.svg" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+							<p style="text-align: center; font-size:0.5em;">
+							Поправка на&nbsp;эффективность&nbsp;ДК в&nbsp;зависимости от&nbsp;полярного угла
+							в&nbsp;сезоне HIGH12.
+							</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			
 			<section data-auto-animate>
 				<section data-auto-animate>
 					<h3>Сечение процесса</h3>
