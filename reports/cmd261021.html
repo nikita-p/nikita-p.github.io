@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Семинар КМД-3 28.10.21</title>
+
+	<link rel="stylesheet" href="../reveal/dist/reset.css">
+	<link rel="stylesheet" href="../reveal/dist/reveal.css">
+	<link rel="stylesheet" href="./assets/cmd281021/cmd.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="../reveal/plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>
+					Изучение процесса e<sup>+</sup>e<sup>–</sup> ➝ K<sub>S</sub>K<sub>L</sub> <br>
+					в диапазоне энергий 1.05 – 2.0 ГэВ <br> в с.ц.м. с детектором КМД-3
+				</h3>
+				<hr>
+				<p style="font-size: 24px; font-weight: 700;">Никита Петров для семинара КМД-3 28.10.21</p>
+			</section>
+
+			<section data-auto-animate data-visibility="uncounted">
+				<h3>План презентации</h3>
+				<ol>
+					<li>Анализ процесса e<sup>+</sup>e<sup>–</sup> ➝ K<sub>S</sub>K<sub>L</sub>
+						<ul style="font-size:0.8em;">
+							<li>Критерии отбора событий</li>
+							<li>Эффективность триггеров</li>
+							<li>Эффективность регистрации</li>
+							<li>Радиационные поправки</li>
+							<li>Поправка к эффективности ДК</li>
+							<li>Сечение процесса</li>
+							<li>Систематические ошибки</li>
+						</ul>
+					</li>
+					<li>Будущие планы</li>
+				</ol>
+			</section>
+			<section>
+				<h3>Анализ процесса e<sup>+</sup>e<sup>–</sup> ➝ K<sub>S</sub>K<sub>L</sub></h3>
+				<div class="sl-block-content" style="text-align: right;">
+					<p style="margin-top: 30px;">В работе использовались данные 2011, 2012, 2017, 2019 и 2020 гг. с
+						интегралом светимости <b>193 пб<sup>-1</sup></b>.
+					</p>
+				</div>
+			</section>
+			<section data-auto-animate>
+                <section data-auto-animate>
+                    <h3>Критерии отбора событий</h3>
+                    <p style="font-size:0.8em; text-align: left;">K<sub>S</sub> отбираются по распаду K<sub>S</sub> ➝ π<sup>+</sup>π<sup>−</sup> специальной процедурой. <br>Если найдено несколько
+                        K<sub>S</sub>, то выбирается один с массой,<br>ближайшей к среднемировой.<br>Требуется,
+                        чтобы K<sub>S</sub>-кандидат был реконструирован по двум «хорошим» трекам.</p>
+                    <div style="display: block; width: 50%; float: left; height: auto; font-size:0.7em; margin-top: 0;">
+                        <p style="margin-top: 25px;">Условия отбора «хороших» треков</p>
+                        <ul>
+                            <li>|z| &lt; 12 см</li>
+                            <li class="fragment highlight-red"><s>|ρ| &gt; 0,1 см</s></li>
+                            <li>|p| &gt; 40 МэВ</li>
+                            <li>Число сработавших<br>
+                                проволочек &gt; 6</li>
+                            <li>χ<sub>r</sub><sup>2</sup> &lt; 15; χ<sub>z</sub><sup>2</sup> &lt; 10</li>
+                            <li>dE/dX этих треков соответствует<br>
+                                ионизационным потерям пионов</li>
+                        </ul>
+                    </div>
+                    <div style=" display: block; width: 50%;  height: auto;  float: right;">
+                        <img src="assets/cmd1202/dedx.png" style="height: auto; width:auto; margin: 0;">
+                    </div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    
+                    <div style="display: block; width: 50%;  height: auto;  float: left;">
+						<img src="assets/cmd281021/cuts/tz_4.png" style="height: auto; width: 90%; margin: auto auto;">
+                        <p style="font-size:0.8em; text-align: center;">|z| &lt; 12 см</p>
+					</div>
+					<div style="display: block; width: 50%; float: right; height: auto;">
+						<img src="assets/cmd281021/cuts/tchi2r_4.png" style="height: auto; width: 90%; margin: auto auto;">
+                        <p style="font-size:0.8em; text-align: center;">χ<sub>r</sub><sup>2</sup> &lt; 15</p>
+					</div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    
+                    <div style="display: block; width: 50%;  height: auto;  float: left;">
+						<img src="assets/cmd281021/cuts/tchi2r_4.png" style="height: auto; width: 90%; margin: auto auto;">
+                        <p style="font-size:0.8em; text-align: center;">χ<sub>r</sub><sup>2</sup> &lt; 15</p>
+					</div>
+					<div style="display: block; width: 50%; float: right; height: auto;">
+						<img src="assets/cmd281021/cuts/tchi2z_4.png" style="height: auto; width: 90%; margin: auto auto;">
+                        <p style="font-size:0.8em; text-align: center;">χ<sub>z</sub><sup>2</sup> &lt; 10</p>
+					</div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    <p style="text-align: left; font-size:0.8em; ">
+                        <span style="font-size: 80% !important;">$$ dE/dx (\pi^{\pm}) = (161/\beta^2) \cdot \big( \ln(19275 \cdot \gamma^2 \beta^2) - \beta^2 \big) $$</span>
+                        </p>
+                    <div style="display: block; width: 50%;  height: auto;  float: left;">
+						<img src="assets/cmd281021/cuts/pvsdedx_4.png" style="height: auto; width: 80%; margin: auto auto;">
+					</div>
+					<div style="display: block; width: 50%; float: right; height: auto;">
+						<img src="assets/cmd281021/cuts/pidedx_4.png" style="height: auto; width: 80%; margin: auto auto;">
+					</div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    
+                    <div style="display: block; width: 40%;  height: auto; float: left; padding: 150px 0 0 0;">
+                        <p style="text-align: center; font-size:0.8em;">
+                        Раньше был отбор |ρ| &gt; 0,1 см, он эффективно устраняет фон, но даёт вклад в систематику до 5%.
+                        </p>
+					</div>
+					<div style="display: block; width: 60%; float: right; height: auto;">
+						<img src="assets/cmd281021/cuts/trho_4.png" style="height: auto; width: 80%; margin: auto auto;">
+					</div>
+                </section>
+			</section>
+			<section data-auto-animate>
+				<h3>Критерии отбора событий</h3>
+				<p style="text-align: left; font-size:0.85em; ">Отбор по углу (α &lt; 0.64) между вектором, соединяющим место
+					встречи пучков с вершиной распада K<sub>S</sub>, и направлением импульса K<sub>S</sub> в r-φ
+					плоскости.</p>
+
+				<div data-id="alpha_def" style=" display: block; width: 40%;  height: auto;  float: unset; margin: 0 auto; padding-top: 20px;">
+					<img src="assets/cmd1202/alpha_def.png" style="height: auto; width: 90%;">
+				</div>
+			</section>
+			<section data-auto-animate>
+				
+                <section data-auto-animate data-visibility="uncounted">
+					<h3>Критерии отбора событий</h3>
+					<p style="font-weight: 500;">α &lt; 0.64</p>
+					<div style=" display: block; width: 50%;  height: auto;  float: left; font-size:0.7em;">
+						<img src="assets/cmd281021/cuts/align_537.5_70914.png">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.7em;">Распределение событий в эксп. и MC по углу α (HIGH19, 537.5 MeV)</p>
+                        </div>
+					</div>
+                    <div
+						style="display: block; width: 50%; float: right; height: auto; font-size:0.7em;">
+						<img src="assets/cmd281021/cuts/align_650_73374.png">
+                        <div style="width: 80%; margin: auto;">
+                        <p style="text-align: center; font-size:0.7em;">Распределение событий в эксп. и MC по углу α (HIGH19, 650 MeV)</p></div>
+					</div>
+				</section>
+                
+                <section data-auto-animate data-visibility="uncounted">
+					<h3>Критерии отбора событий</h3>
+					<p style="font-weight: 500;">α &lt 0.64</p>
+					<div style=" display: block; width: 50%;  height: auto;  float: left; font-size:0.7em;">
+						<img src="assets/cmd281021/cuts/align_800_76450.png">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.7em;">Распределение событий в эксп. и MC по углу α (HIGH19, 800 MeV)</p>
+                        </div>
+					</div>
+                    <div
+						style="display: block; width: 50%; float: right; height: auto; font-size:0.7em;">
+						<img src="assets/cmd281021/cuts/align_936_79212.png">
+                        <div style="width: 80%; margin: auto;">
+                        <p style="text-align: center; font-size:0.7em;">Распределение событий в эксп. и MC по углу α (HIGH19, 936 MeV)</p></div>
+					</div>
+				</section>
+                
+			</section>
+			
+            <section data-auto-animate>
+				<h3>Критерии отбора событий</h3>
+				<div style="display: block; width: 50%; float: left; height: auto; font-size:0.7em; padding-top: 50px;">
+					<p style="text-align: left; font-size:0.9em; ">Новый отбор по <b>импульсу π<sup>±</sup> — углу разлёта распадных пионов (ψ)</b>, 
+                    т.к. между ними существует связь (<a href="http://alexandr4784.narod.ru/l02/l2_gl02_11.pdf">ЛЛ, т.2, п.11</a>)</p>
+				</div>
+				<div style=" display: block; width: 50%;  height: auto; float: right;">
+					<img fragment='fade-out' src="assets/cmd281021/process.png" style="height: auto; width: auto;">
+				</div>
+			</section>
+            
+            <section data-auto-animate>
+                <section data-auto-animate>
+                    <h3>Критерии отбора событий</h3>
+                    <div style="display: block; width: 50%;  height: auto;  float: left;">
+                        <img src="assets/cmd281021/cuts/537.5_mom_psi_exp.png" style="height: auto; width: 95%; margin: auto auto;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение событий в эксп. (HIGH19, <b>537.5 MeV</b>) по импульсу π<sup>±</sup>
+                            в зависимости от угла разлёта (ψ). Чёрным обозначены критерии отбора.
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: block; width: 50%; float: right; height: auto;">
+                        <img src="assets/cmd281021/cuts/537.5_mom_psi_mc.png" style="height: auto; width: 95%; margin: auto auto;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение событий в MC (HIGH19, <b>537.5 MeV</b>) по импульсу π<sup>±</sup>
+                            в зависимости от угла разлёта (ψ). Чёрным обозначены критерии отбора.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    <div style="display: block; width: 50%;  height: auto;  float: left;">
+                        <img src="assets/cmd281021/cuts/650_mom_psi_exp.png" style="height: auto; width: 95%; margin: auto auto;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение событий в эксп. (HIGH19, <b>650 MeV</b>) по импульсу π<sup>±</sup>
+                            в зависимости от угла разлёта (ψ). Чёрным обозначены критерии отбора.
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: block; width: 50%; float: right; height: auto;">
+                        <img src="assets/cmd281021/cuts/650_mom_psi_mc.png" style="height: auto; width: 95%; margin: auto auto;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение событий в MC (HIGH19, <b>650 MeV</b>) по импульсу π<sup>±</sup>
+                            в зависимости от угла разлёта (ψ). Чёрным обозначены критерии отбора.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    <div style="display: block; width: 50%;  height: auto;  float: left;">
+                        <img src="assets/cmd281021/cuts/800_mom_psi_exp.png" style="height: auto; width: 95%; margin: auto auto;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение событий в эксп. (HIGH19, <b>800 MeV</b>) по импульсу π<sup>±</sup>
+                            в зависимости от угла разлёта (ψ). Чёрным обозначены критерии отбора.
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: block; width: 50%; float: right; height: auto;">
+                        <img src="assets/cmd281021/cuts/800_mom_psi_mc.png" style="height: auto; width: 95%; margin: auto auto;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение событий в MC (HIGH19, <b>800 MeV</b>) по импульсу π<sup>±</sup>
+                            в зависимости от угла разлёта (ψ). Чёрным обозначены критерии отбора.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    <div style="display: block; width: 50%;  height: auto;  float: left;">
+                        <img src="assets/cmd281021/cuts/936_mom_psi_exp.png" style="height: auto; width: 95%; margin: auto auto;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение событий в эксп. (HIGH19, <b>936 MeV</b>) по импульсу π<sup>±</sup>
+                            в зависимости от угла разлёта (ψ). Чёрным обозначены критерии отбора.
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: block; width: 50%; float: right; height: auto;">
+                        <img src="assets/cmd281021/cuts/936_mom_psi_mc.png" style="height: auto; width: 95%; margin: auto auto;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение событий в MC (HIGH19, <b>936 MeV</b>) по импульсу π<sup>±</sup>
+                            в зависимости от угла разлёта (ψ). Чёрным обозначены критерии отбора.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+			</section>
+            
+            <section data-auto-animate>
+                <section data-auto-animate>
+                    <h3>Критерии отбора событий</h3>
+                    <div style="display: block; width: 32%; float: left; height: auto; font-size:0.7em; padding-top: 50px;">
+                        <p style="text-align: left; font-size:0.9em; ">
+                            Для отобранных событий строю распределение по
+                            инв. массе K<sub>S</sub> в зависимости от импульса K<sub>S</sub>, а затем поворачиваю на
+                            "угол корреляции".
+                        </p>
+                    </div>
+                    <div style=" display: block; width: 68%;  height: auto; float: right;">
+                        <img fragment='fade-out' src="assets/cmd281021/cuts/537.5_70914_minv_mom.png" style="height: auto; width: auto;">                    
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение плотности событий в эксп. и MC (HIGH19, <b>537.5 MeV</b>) по инв. массе K<sub>S</sub>
+                            в зависимости от его импульса. Чёрным обозначены оси после поворота на "угол корреляции".
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    <div style="display: block; width: 50%; float: left; height: auto;">
+                        <img fragment='fade-out' src="assets/cmd281021/cuts/650_73374_minv_mom.png" style="height: auto; width: auto;">                    
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение плотности событий в эксп. и MC (HIGH19, <b>650 MeV</b>) по инв. массе K<sub>S</sub>
+                            в зависимости от его импульса. Чёрным обозначены оси после поворота на "угол корреляции".
+                            </p>
+                        </div>
+                    </div>
+                    <div style=" display: block; width: 50%;  height: auto; float: right;">
+                        <img fragment='fade-out' src="assets/cmd281021/cuts/800_76450_minv_mom.png" style="height: auto; width: auto;">                    
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение плотности событий в эксп. и MC (HIGH19, <b>800 MeV</b>) по инв. массе K<sub>S</sub>
+                            в зависимости от его импульса. Чёрным обозначены оси после поворота на "угол корреляции".
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    <div style=" display: block; width: 85%;  height: auto; margin: 0 auto;">
+                        <img fragment='fade-out' src="assets/cmd281021/cuts/936_79212_minv_mom.png" style="height: auto; width: auto;">                    
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение плотности событий в эксп. и MC (HIGH19, <b>936 MeV</b>) по инв. массе K<sub>S</sub>
+                            в зависимости от его импульса. Чёрным обозначены оси после поворота на "угол корреляции".
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    <div style="display: block; width: 85%;  height: auto; margin: 0 auto;">
+                        <img fragment='fade-out' src="assets/cmd281021/cuts/537.5_70914_minv_mom_equal.png" style="height: auto; width: auto;">                    
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">Распределение плотности событий в эксп. и MC (HIGH19, 537.5 MeV) по инв. массе K<sub>S</sub>
+                            в зависимости от его импульса <b>с сохранением пропрорций</b>. Чёрным обозначены оси после поворота на "угол корреляции".
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate data-visibility="uncounted">
+                    <h3>Критерии отбора событий</h3>
+                    <div style="display: block; width: 30%; float: left; height: auto; padding-top: 50px;">
+                        <p style="text-align: left; font-size:0.6em; ">
+                            С помощью MC Toy показываю, что между вычисленной инв. массой и импульсом будет корреляция:
+                            <br>
+                            $$M_K^2 = 2 M_{\pi}^2 + 2 ( \epsilon_+ \epsilon_- - p_+ p_- \cos\psi ) $$
+                            
+                            $$p_K^2 = p_+^2 + p_-^2 + 2 p_+ p_- \cos\psi $$
+                            <br>
+                            В реальности <span>$$\psi = \psi^0 + \delta\psi$$</span> <span>$$p_\pm = p_\pm^0 + \delta p_\pm$$</span>
+                        </p>
+                    </div>
+                    <div style="display: block; float: right; width: 70%;  height: auto; margin: 0 auto;">
+                        <img fragment='fade-out' src="assets/cmd281021/experiments/minv_ptot_mctoy.png" style="height: auto; width: 60%;"> 
+                    </div>
+                </section>
+			</section>
+            
+            
+			<section>
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Критерии отбора событий</h3>
+					<div
+						style="display: block; width: 50%; float: left; height: auto; font-size:0.7em; padding-top: 50px;">
+						<p style="text-align: left; font-size:0.9em; ">Для отобранных событий строю распределение по
+							инв. массе K<sub>S</sub> в зависимости от импульса K<sub>S</sub>, а затем поворачиваю на
+							"угол корреляции".</p>
+						<p style="text-align: left; font-size:0.9em; padding-top: 20px;">Это позволяет взять наибольшее
+							количество сигнальных событий, отделить упругие события от событий
+							с возвращением на резонанс и фоновых событий с K<sub>S</sub>, таких как K<sub>S</sub>Kπ,
+							K<sub>S</sub>Kππ<sup>0</sup>, K<sub>S</sub>K<sub>L</sub>π<sup>0</sup>π<sup>0</sup> </p>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/mp_x1x2.png" style="height: auto; width: auto;">
+					</div>
+				</section>
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Критерии отбора событий</h3>
+					<div style="display: block; width: 50%; float: left; height: auto; font-size:0.7em;">
+						<img src="assets/cmd1202/mp_x1x2.png" style="height: auto; width: auto;">
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/x1.png" style="height: auto; width: auto;">
+					</div>
+				</section>
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Критерии отбора событий</h3>
+					<div style="display: block; width: 50%; float: left; height: auto; font-size:0.7em;">
+						<img src="assets/cmd1202/mp_x1x2.png" style="height: auto; width: auto;">
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/x12.png" style="height: auto; width: auto;">
+					</div>
+				</section>
+			</section>
+			<section data-auto-animate>
+				<section data-auto-animate>
+					<h3>Определение числа событий</h3>
+					<p>Аппроксимация распределений по x1 производилась функцией:
+						\[f \sim N_{sig} \cdot \text{cruijff}(x, m, sL, sR, aL, aR) + N_{bkg} \cdot \text{linear}(x, y0,
+						dy)\]
+					</p>
+					<div style="display: block; width: 50%; float: left; height: auto; font-size:0.7em;">
+						<img src="assets/cmd1202/mc_800_19.png" style="height: auto; width: auto;">
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/exp_800_19.png" style="height: auto; width: auto;">
+					</div>
+				</section>
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Определение числа событий</h3>
+					<p>Определение функций аппроксимации: </p>
+					<p>\[
+						\text{cruijff}(x, m, s_L, s_R, a_L, a_R) = \begin{cases}
+						\exp{\big(\frac{(x-m)^2}{2( s_L^2 + a_L (x-m)^2)}\big)}, x &lt; m\\
+						\exp{\big(\frac{(x-m)^2}{2( s_R^2 + a_R (x-m)^2)}\big)}, x \geq m
+						\end{cases} \]</p>
+					<p>\[ \text{linear}(x, y_0, dy) = y_0 + dy \frac{x - x_0}{x_1 - x_0} \]</p>
+				</section>
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Определение числа событий</h3>
+					<p style="font-size:0.7em;">Пример аппроксимации для HIGH19, 912.5 MeV</p>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd1202/mc_912.5_19.png" style="height: auto; width: auto;">
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/exp_912.5_19.png" style="height: auto; width: auto;">
+					</div>
+				</section>
+			</section>
+			<section data-auto-animate>
+				<h3>Эффективность триггеров</h3>
+				<div style="display: block; width: 30%; float: left; height: auto; font-size:0.7em;">
+					<p>\[ \varepsilon_{trig} = 1 - (1- \varepsilon_{TF}) (1 - \varepsilon_{CF}) \]</p>
+					<p>\[ \varepsilon_{TF} = \frac{N_{TF\&CF} + 1}{N_{CF} + N_{TF\&CF} + 2} \]</p>
+					<p>\[ \varepsilon_{CF} = \frac{N_{TF\&CF} + 1}{N_{TF} + N_{TF\&CF} + 2} \]</p>
+				</div>
+				<div style=" display: block; width: 70%;  height: auto; float: right;">
+					<img src="assets/cmd1202/trigs.png" style="height: auto; width: auto;">
+				</div>
+			</section>
+			<section data-auto-animate>
+				<h3>Эффективность регистрации</h3>
+				<div>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd1202/reg_800_19.png" style="height: auto; width: auto;">
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/effreg.png" style="height: auto; width: auto;">
+					</div>
+				</div>
+				<p style="font-size:0.7em;">Определяется и аппроксимируется эффективность регистрации в зависимости от
+					энергии радиационного
+					фотона </p>
+			</section>
+			<section>
+				<section data-auto-animate>
+					<h3>Поправка на эффективность ДК</h3>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<p style=" font-size:0.7em; padding-top: 40px;">
+							Для определения поправки на эффективность ДК отбирались события с одним треком, летящим
+							ортогонально ДК, и сравнивались распределения по угловому распределению второго трека.
+						</p>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/dccorr.png" style="height: auto; width: auto;">
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Поправка на эффективность ДК</h3>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<img src="assets/cmd1202/pi_th_17.png" style="height: auto; width: auto;">
+						<p style=" font-size:0.7em;">HIGH17</p>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cmd1202/pi_th_19.png" style="height: auto; width: auto;">
+						<p style=" font-size:0.7em;">HIGH19</p>
+					</div>
+				</section>
+			</section>
+			<section data-auto-animate>
+				<h3>Рад. поправки</h3>
+				<p style="font-size:0.7em;">Радиационная поправка определяется по формуле:
+					\[ \sigma_{vis} = \int_0^1 F(x, s) \sigma_{born} (s [1-x]) \varepsilon_{reg}(x,s)dx = \sigma_{born}
+					\varepsilon (1+\delta) \]
+				</p>
+
+				<div style="display: block; width: 50%; float: left; height: auto;">
+					<img src="assets/cmd1202/effreg.png" style="height: auto; width: auto;">
+				</div>
+				<div style=" display: block; width: 50%;  height: auto; float: right;">
+					<img src="assets/cmd1202/rad.png" style="height: auto; width: auto;">
+				</div>
+			</section>
+			<section data-auto-animate>
+				<section data-auto-animate>
+					<h3>Сечение процесса</h3>
+					<div style="display: block; width: 20%; float: left; height: auto;">
+						<p style="font-size:0.7em; padding-top: 80px;">
+							\[ \sigma_{born} = \frac{N_{sig}}{\varepsilon L (1 + \delta)} \]
+						</p>
+					</div>
+					<div style=" display: block; width: 75%;  height: auto; float: right;">
+						<img src="assets/cmd1202/cs.png" style="height: auto; width: auto;">
+					</div>
+				</section>
+				<section data-auto-animate data-visibility="uncounted">
+					<h3>Сечение процесса</h3>
+					<p>Предварительная разница между измерениями</p>
+					<img src="assets/cmd1202/diff.png" style="height: auto; width: auto;">
+				</section>
+			</section>
+			<section data-auto-animate>
+				<h3>Будущие планы</h3>
+				<ul>
+					<li>Проверить поправку на эффективность ДК</li>
+					<li>Совместный анализ с e<sup>+</sup>e<sup>–</sup> ➝ K<sup>+</sup>K<sup>–</sup></li>
+					<li>Определить систематические ошибки</li>
+					<li>Представить результаты работы на конференциях и т.д.</li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="../reveal/dist/reveal.js"></script>
+	<script src="../reveal/plugin/math/math.js"></script>
+	<script src="../reveal/plugin/notes/notes.js"></script>
+	<script src="../reveal/plugin/markdown/markdown.js"></script>
+	<script src="../reveal/plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: 'c/t',
+			width: 1280,
+			height: 720,
+			// margin: 0.01,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath]
+		});
+	</script>
+</body>
+
+</html>
