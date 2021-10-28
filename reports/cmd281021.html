@@ -548,6 +548,48 @@
                         </div>
 					</div>
 				</section>
+                <section data-auto-animate data-visibility>
+					<h3>Структура фона (multihadrons gen)</h3>
+                    <div style=" display: block; width: 70%; height: auto; margin: auto; font-size:0.7em; padding-top:60px;">
+                        <table>
+                            <thead><tr>
+                                <th>E<sub>beam</sub>&nbsp;[МэВ]</th>
+                                <th>Основные&nbsp;фон.&nbsp;процессы</th>
+                            </tr></thead>
+                            <tbody><tr>
+                                <td>537.5</td>
+                                <td>
+                                    2π<sup>±</sup>2π<sup>0</sup> (70%), 
+                                    π<sup>+</sup>π<sup>-</sup>π<sup>0</sup> (19%), 
+                                    π<sup>+</sup>π<sup>-</sup> (7%), 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>650</td>
+                                <td>
+                                    2π<sup>±</sup>2π<sup>0</sup> (89%), 
+                                    π<sup>+</sup>π<sup>-</sup>π<sup>0</sup> (7%), 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>800</td>
+                                <td>
+                                    2π<sup>±</sup>2π<sup>0</sup> (86%), 
+                                    π<sup>+</sup>π<sup>-</sup>η (9%)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>936</td>
+                                <td>
+                                    2π<sup>±</sup>2π<sup>0</sup> (82%), 
+                                    π<sup>+</sup>π<sup>-</sup>η (10%), 
+                                    π<sup>+</sup>π<sup>-</sup>3π<sup>0</sup> (3%)
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section>
 				
 			</section>
 				
@@ -640,7 +682,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="uncounted">
 					<h3>Поправка на эффективность ДК</h3>
 					<div style="display: block; width: 50%; float: left; height: auto;">
 						<img src="assets/cmd281021/other/dccorrHIGH11.svg" style="height: auto; width: auto;">
@@ -660,7 +702,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="uncounted">
 					<h3>Поправка на эффективность ДК</h3>
 					<div style="display: block; width: 50%; float: left; height: auto;">
 						<img src="assets/cmd281021/other/dccorrHIGH19.svg" style="height: auto; width: auto;">
@@ -681,7 +723,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="uncounted">
 					<h3>Поправка на эффективность ДК</h3>
 					<div style="display: block; width: 50%; float: left; height: auto;">
 						<img src="assets/cmd281021/other/dccorrHIGH17.svg" style="height: auto; width: auto;">
@@ -702,7 +744,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="uncounted">
 					<h3>Поправка на эффективность ДК</h3>
 					<div style="display: block; width: 50%; float: left; height: auto;">
 						<img src="assets/cmd281021/other/dccorrHIGH12.svg" style="height: auto; width: auto;">
@@ -734,15 +776,100 @@
 						</p>
 					</div>
 					<div style=" display: block; width: 75%;  height: auto; float: right;">
-						<img src="assets/cmd1202/cs.png" style="height: auto; width: auto;">
+						<img src="assets/cmd281021/cs/cs_log.svg" style="height: auto; width: 90%;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+                            Зависимость сечения процесса e<sup>+</sup>e<sup>–</sup>&nbsp;➝&nbsp;K<sub>S</sub>K<sub>L</sub> от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам
+                            в&nbsp;логарифмическом масштабе (без&nbsp;учёта поправок на&nbsp;ДК).
+                            </p>
+                        </div>
 					</div>
 				</section>
 				<section data-auto-animate data-visibility="uncounted">
 					<h3>Сечение процесса</h3>
-					<p>Предварительная разница между измерениями</p>
-					<img src="assets/cmd1202/diff.png" style="height: auto; width: auto;">
+					<div style="display: block; width: 50%; float: left; height: auto;">
+                        <img src="assets/cmd281021/cs/cs_log.svg" style="height: auto; width: 90%;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+                            Зависимость сечения процесса e<sup>+</sup>e<sup>–</sup>&nbsp;➝&nbsp;K<sub>S</sub>K<sub>L</sub> от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам
+                            в&nbsp;логарифмическом масштабе.
+                            </p>
+                        </div>
+                    </div>
+                    <div style=" display: block; width: 50%;  height: auto; float: right;">
+                        <img src="assets/cmd281021/cs/cs_lin.svg" style="height: auto; width: 90%;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+                            Зависимость сечения процесса e<sup>+</sup>e<sup>–</sup>&nbsp;➝&nbsp;K<sub>S</sub>K<sub>L</sub> от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам
+                            в&nbsp;symlog масштабе.
+                            </p>
+                        </div>
+                    </div>
 				</section>
 			</section>
+            
+            <section data-auto-animate>
+                <section data-auto-animate data-visibility>
+					<h3>Сиситематические ошибки</h3>
+                    
+					<ul>
+                        <li>Сдвигать каты (как быть с катом P-ψ?)</li>
+                        <li>Какие ещё методы (лайклихуд)?</li>
+                        <li>Что нужно проверить?</li>
+                    </ul>
+				</section>
+                 <section data-auto-animate data-visibility>
+					<h3>Сиситематические ошибки</h3>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+                        <img src="assets/cmd281021/other/ks_x1_resol_800.png" style="height: auto; width: 90%;">
+                        <div style="width: 80%; margin: auto;">
+                            <p style="text-align: center; font-size:0.5em;">
+                            Распределение событий в&nbsp;MC KSKL по&nbsp;разнице между генерированным и&nbsp;восстановленным параметром&nbsp;x1 (разрешение по&nbsp;x1).
+                            </p>
+                        </div>
+                    </div>
+                    <div style=" display: block; width: 50%;  height: auto; float: right; font-size:0.7em; padding-top:60px;">
+                        <table>
+                            <thead><tr>
+                                <th>E<sub>beam</sub>&nbsp;[МэВ]</th>
+                                <th>Сист. ошибка от&nbsp;x1&nbsp;(%)</th>
+                                <th>Стат. ошибка&nbsp;(%)</th>
+                            </tr></thead>
+                            <tbody><tr>
+                                <td>537.5</td>
+                                <td>0.3</td>
+                                <td>2.5</td>
+                            </tr>
+                            <tr>
+                                <td>650</td>
+                                <td>1.6</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>800</td>
+                                <td>0.2</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>936</td>
+                                <td>6</td>
+                                <td>36</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section>
+			</section>
+			<section data-auto-animate>
+				<h3>Будущие планы</h3>
+				<ul>
+					<li>Проверить поправку на эффективность ДК</li>
+					<li>Совместный анализ с e<sup>+</sup>e<sup>–</sup> ➝ K<sup>+</sup>K<sup>–</sup></li>
+					<li>Определить систематические ошибки</li>
+					<li>Представить результаты работы на конференциях и т.д.</li>
+				</ul>
+			</section>
+            
 			<section data-auto-animate>
 				<h3>Будущие планы</h3>
 				<ul>
