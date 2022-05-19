@@ -626,33 +626,6 @@
 				</p>
 
 				<div style="display: block; width: 50%; float: left; height: auto;">
-					<img src="assets/cmd281021/regeff/total_regeff.png" style="height: auto; width: 90%;">
-					<div style="width: 80%; margin: auto;">
-						<p style="text-align: center; font-size:0.5em;">
-						Эффективность регистрации для&nbsp;рад.фотона с&nbsp;нулевой энергией в&nbsp;зависимости
-						от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам
-						</p>
-					</div>
-				</div>
-				<div style=" display: block; width: 50%;  height: auto; float: right;">
-					<img src="assets/cmd281021/other/radcors.png" style="height: auto; width: 90%;">
-					<div style="width: 80%; margin: auto;">
-						<p style="text-align: center; font-size:0.5em;">
-						Рад.поправка в&nbsp;зависимости
-						от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам
-						</p>
-					</div>
-				</div>
-			</section>
-			
-			<section data-auto-animate>
-				<h3>Рад. поправки</h3>
-				<p style="font-size:0.7em;">Радиационная поправка определяется по формуле:
-					\[ \sigma_{vis} = \int_0^1 F(x, s) \sigma_{born} (s [1-x]) \varepsilon_{reg}(x,s)dx = \sigma_{born}
-					\varepsilon (1+\delta) \]
-				</p>
-
-				<div style="display: block; width: 50%; float: left; height: auto;">
 					<img src="assets/cys200522/effreg.png" style="height: auto; width: 90%;">
 					<div style="width: 80%; margin: auto;">
 						<p style="text-align: center; font-size:0.5em;">
@@ -662,7 +635,7 @@
 					</div>
 				</div>
 				<div style=" display: block; width: 50%;  height: auto; float: right;">
-					<img src="assets/cmd281021/other/radcors.png" style="height: auto; width: 90%;">
+					<img src="assets/cys200522/radcors.png" style="height: auto; width: 90%;">
 					<div style="width: 80%; margin: auto;">
 						<p style="text-align: center; font-size:0.5em;">
 						Рад.поправка в&nbsp;зависимости
@@ -672,21 +645,49 @@
 				</div>
 			</section>
 
+			<!--16. Поправка на эффективность ДК-->
 			<section>
 				<section data-auto-animate>
-					<h3>Поправка на эффективность ДК</h3>
+					<h3>Эффективность реконструкции в ДК</h3>
 					<div style="display: block; width: 50%; float: left; height: auto;">
-						<p style=" font-size:0.7em; padding-top: 40px;">
-							Для определения поправки на эффективность ДК я отбирал события с одним треком, летящим
-							ортогонально ДК (π/2&nbsp;-&nbsp;0.3&nbsp;&lt;&nbsp;θ&nbsp;&lt;&nbsp;π/2&nbsp;+&nbsp;0.3) и сравнивал распределения второго трека по углам и импульсам в эксперименте и MC.
+						<p style="text-align:left; font-size:0.7em; padding-top: 40px;">
+						Предположение*: эффективность реконструкции для треков, летящих в&nbsp;область&nbsp;ДК 
+						<nobr>π/2 - 0.4 &lt; θ &lt; π/2 + 0.4</nobr> одинакова в&nbsp;эксперименте и MC.
+						</p>
+						<p style="text-align:left; font-size:0.7em; padding-top: 40px;">
+						Выбираю среди сигнальных событий те, где хотя бы у&nbsp;одного трека подходящий&nbsp;θ.
+						Сравниваю распределения по&nbsp;θ для второго трека в&nbsp;эксперименте и МС.
+						</p>
+						<p style="text-align:left; font-size:0.6em; padding-top: 40px;">*проверено</p>
+					</div>
+					<div style=" display: block; width: 50%;  height: auto; float: right;">
+						<img src="assets/cys200522/receff19th.png" style="height: auto; width: auto;">
+						<div style="width: 80%; margin: auto;">
+							<p style="text-align: center; font-size:0.5em;">
+							Сравнение распределений по&nbsp;полярному углу&nbsp;θ в&nbsp;эксперименте и&nbsp;МС.
+							Чёрным обозначена область, где эффективность считалась одинаковой.
+							</p>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Эффективность реконструкции в ДК</h3>
+					<div style="display: block; width: 50%; float: left; height: auto;">
+						<p style="text-align:left; font-size:0.7em; padding-top: 40px;">
+						Выбираю среди сигнальных событий те, где хотя бы у&nbsp;одного трека подходящий&nbsp;θ.
+						Сравниваю распределения по&nbsp;θ для второго трека в&nbsp;эксперименте и МС.
+						</p>
+						
+						<p style="text-align:left; font-size:0.7em; padding-top: 40px;">
+						Отношение распределения в&nbsp;эксперименте и МС определяет поправку в&nbsp;зависимости от&nbsp;θ.
+						События из&nbsp;МС перевзвешиваются с&nbsp;учётом поправки.
 						</p>
 					</div>
 					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd281021/other/dccorrHIGH11_ratio.svg" style="height: auto; width: auto;">
+						<img src="assets/cys200522/receff19.png" style="height: auto; width: auto;">
 						<div style="width: 80%; margin: auto;">
 							<p style="text-align: center; font-size:0.5em;">
-							Поправка на&nbsp;эффективность&nbsp;ДК в&nbsp;зависимости от&nbsp;полярного угла
-							в&nbsp;сезоне HIGH11
+							Поправка на&nbsp;эффективность реконструкции ДК в&nbsp;зависимости от&nbsp;θ.
 							</p>
 						</div>
 					</div>
@@ -694,109 +695,56 @@
 				<section data-auto-animate data-visibility="uncounted">
 					<h3>Поправка на эффективность ДК</h3>
 					<div style="display: block; width: 50%; float: left; height: auto;">
-						<img src="assets/cmd281021/other/dccorrHIGH11.svg" style="height: auto; width: auto;">
+						<img src="assets/cys200522/receff19p.png" style="height: auto; width: auto;">
 						<div style="width: 80%; margin: auto;">
 							<p style="text-align: center; font-size:0.5em;">
-							Распределение событий по&nbsp;полярному углу второго трека в&nbsp;эксперименте и MC (HIGH11).
-							Количество событий отнормировано на&nbsp;область между чёрными линиями.
+							Распределение событий по&nbsp;импульсу второго трека в&nbsp;эксперименте и MC.
 							</p>
 						</div>
 					</div>
 					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd281021/other/dccorrHIGH11_mom.svg" style="height: auto; width: auto;">
+						<img src="assets/cys200522/receff19_2.png" style="height: auto; width: auto;">
 						<div style="width: 80%; margin: auto;">
 							<p style="text-align: center; font-size:0.5em;">
-							Распределение событий по&nbsp;импульсу второго трека в&nbsp;эксперименте и MC (HIGH11).
+							Поправка на&nbsp;эффективность&nbsp;ДК в&nbsp;зависимости от&nbsp;импульса.
+							(Поправка считается независимой от импульса трека)
 							</p>
 						</div>
 					</div>
 				</section>
 				<section data-auto-animate data-visibility="uncounted">
-					<h3>Поправка на эффективность ДК</h3>
-					<div style="display: block; width: 50%; float: left; height: auto;">
-						<img src="assets/cmd281021/other/dccorrHIGH19.svg" style="height: auto; width: auto;">
-						<div style="width: 80%; margin: auto;">
-							<p style="text-align: center; font-size:0.5em;">
-							Распределение событий по&nbsp;полярному углу второго трека в&nbsp;эксперименте и MC (HIGH19).
-							Количество событий отнормировано на&nbsp;область между чёрными линиями.
-							</p>
-						</div>
+					<h4>Эффективность реконструкции в ДК</h4>
+					<p style="font-size:0.7em;">проверка одинаковой эффективности для <nobr>π/2 - 0.4 &lt; θ &lt; π/2 + 0.4</nobr></p>
+					
+					<div style="display: block; width: 50%; float: left; height: auto; padding-top: 40px;">
+						<p style="text-align:left; font-size:0.7em;">
+						Для этого выбираю события сигнального процесса по&nbsp;кластеру&nbsp;K<sub>L</sub> и треку-кандидату в&nbsp;заряженный&nbsp;π.
+						</p>
+						<p style="text-align:left; font-size:0.7em; padding-top: 20px;">
+						Эффективность реконструкции в&nbsp;эксперименте и МС определяется по&nbsp;формуле:
+						</p>
+						<p style="text-align:left; font-size:0.7em;">
+						\[ \varepsilon_{rec} = \frac{1}{1 + N_1/N_2} \]
+						</p>
+						<p style="text-align:left; font-size:0.7em;">
+						N<sub>1</sub> - количество однотрековых событий<br>
+						N<sub>2</sub> - количество двухтрековых событий
+						</p>
 					</div>
-					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd281021/other/dccorrHIGH19_ratio.svg" style="height: auto; width: auto;">
+					<div style=" display: block; width: 50%;  height: auto; float: right; padding-top: 10px;">
+						<img src="assets/cys200522/receff_checkup.png" style="height: auto; width: auto;">
 						<div style="width: 80%; margin: auto;">
 							<p style="text-align: center; font-size:0.5em;">
-							Поправка на&nbsp;эффективность&nbsp;ДК в&nbsp;зависимости от&nbsp;полярного угла
-							в&nbsp;сезоне HIGH19.
-							</p>
-						</div>
-					</div>
-				</section>
-				<section data-auto-animate data-visibility="uncounted">
-					<h3>Поправка на эффективность ДК</h3>
-					<div style="display: block; width: 50%; float: left; height: auto;">
-						<img src="assets/cmd281021/other/dccorrHIGH17.svg" style="height: auto; width: auto;">
-						<div style="width: 80%; margin: auto;">
-							<p style="text-align: center; font-size:0.5em;">
-							Распределение событий по&nbsp;полярному углу второго трека в&nbsp;эксперименте и MC (HIGH17).
-							Количество событий отнормировано на&nbsp;область между чёрными линиями.
-							</p>
-						</div>
-					</div>
-					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd281021/other/dccorrHIGH17_ratio.svg" style="height: auto; width: auto;">
-						<div style="width: 80%; margin: auto;">
-							<p style="text-align: center; font-size:0.5em;">
-							Поправка на&nbsp;эффективность&nbsp;ДК в&nbsp;зависимости от&nbsp;полярного угла
-							в&nbsp;сезоне HIGH17.
-							</p>
-						</div>
-					</div>
-				</section>
-				<section data-auto-animate data-visibility="uncounted">
-					<h3>Поправка на эффективность ДК</h3>
-					<div style="display: block; width: 50%; float: left; height: auto;">
-						<img src="assets/cmd281021/other/dccorrHIGH12.svg" style="height: auto; width: auto;">
-						<div style="width: 80%; margin: auto;">
-							<p style="text-align: center; font-size:0.5em;">
-							Распределение событий по&nbsp;полярному углу второго трека в&nbsp;эксперименте и MC (HIGH12).
-							Количество событий отнормировано на&nbsp;область между чёрными линиями.
-							</p>
-						</div>
-					</div>
-					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd281021/other/dccorrHIGH12_ratio.svg" style="height: auto; width: auto;">
-						<div style="width: 80%; margin: auto;">
-							<p style="text-align: center; font-size:0.5em;">
-							Поправка на&nbsp;эффективность&nbsp;ДК в&nbsp;зависимости от&nbsp;полярного угла
-							в&nbsp;сезоне HIGH12.
-							</p>
-						</div>
-					</div>
-				</section>
-                <section data-auto-animate data-visibility="uncounted">
-					<h3>Поправка на эффективность ДК</h3>
-					<div style="display: block; width: 50%; float: left; height: auto;">
-						<img src="assets/cmd281021/other/dccorrHIGH20.svg" style="height: auto; width: auto;">
-						<div style="width: 80%; margin: auto;">
-							<p style="text-align: center; font-size:0.5em;">
-							Распределение событий по&nbsp;полярному углу второго трека в&nbsp;эксперименте и MC (HIGH20).
-							Количество событий отнормировано на&nbsp;область между чёрными линиями.
-							</p>
-						</div>
-					</div>
-					<div style=" display: block; width: 50%;  height: auto; float: right;">
-						<img src="assets/cmd281021/other/dccorrHIGH20_ratio.svg" style="height: auto; width: auto;">
-						<div style="width: 80%; margin: auto;">
-							<p style="text-align: center; font-size:0.5em;">
-							Поправка на&nbsp;эффективность&nbsp;ДК в&nbsp;зависимости от&nbsp;полярного угла
-							в&nbsp;сезоне HIGH20.
+							Поправка на&nbsp;эффективность реконструкции ДК в&nbsp;зависимости от&nbsp;θ.
+							В выделенной области <nobr>π/2 - 0.4 &lt; θ &lt; π/2 + 0.4</nobr> эфф. рек. в эксперименте и МС составили
+							<nobr>0.994±0.003</nobr> и <nobr>0.995±0.002</nobr>.
 							</p>
 						</div>
 					</div>
 				</section>
 			</section>
 			
+			<!--17. Cross section -->
 			<section data-auto-animate>
 				<section data-auto-animate>
 					<h3>Сечение процесса</h3>
@@ -806,46 +754,25 @@
 						</p>
 					</div>
 					<div style=" display: block; width: 75%;  height: auto; float: right;">
-						<img src="assets/cmd281021/cs/cs_log.svg" style="height: auto; width: 90%;">
+						<img src="assets/cys200522/cs.png" style="height: auto; width: 90%;">
                         <div style="width: 80%; margin: auto;">
                             <p style="text-align: center; font-size:0.5em;">
-                            Зависимость сечения процесса e<sup>+</sup>e<sup>–</sup>&nbsp;➝&nbsp;K<sub>S</sub>K<sub>L</sub> от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам
-                            в&nbsp;логарифмическом масштабе (без&nbsp;учёта поправок на&nbsp;ДК).
+                            Зависимость сечения процесса e<sup>+</sup>e<sup>–</sup>&nbsp;➝&nbsp;K<sub>S</sub>K<sub>L</sub> от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам в&nbsp;логарифмическом масштабе.
                             </p>
                         </div>
 					</div>
 				</section>
-				<section data-auto-animate data-visibility="uncounted">
-					<h3>Сечение процесса</h3>
-					<div style="display: block; width: 50%; float: left; height: auto;">
-                        <img src="assets/cmd281021/cs/cs_log.svg" style="height: auto; width: 90%;">
-                        <div style="width: 80%; margin: auto;">
-                            <p style="text-align: center; font-size:0.5em;">
-                            Зависимость сечения процесса e<sup>+</sup>e<sup>–</sup>&nbsp;➝&nbsp;K<sub>S</sub>K<sub>L</sub> от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам
-                            в&nbsp;логарифмическом масштабе.
-                            </p>
-                        </div>
-                    </div>
-                    <div style=" display: block; width: 50%;  height: auto; float: right;">
-                        <img src="assets/cmd281021/cs/cs_lin.svg" style="height: auto; width: 90%;">
-                        <div style="width: 80%; margin: auto;">
-                            <p style="text-align: center; font-size:0.5em;">
-                            Зависимость сечения процесса e<sup>+</sup>e<sup>–</sup>&nbsp;➝&nbsp;K<sub>S</sub>K<sub>L</sub> от&nbsp;энергии в&nbsp;с.ц.м. по&nbsp;сезонам
-                            в&nbsp;symlog масштабе.
-                            </p>
-                        </div>
-                    </div>
-				</section>
 			</section>
             
+			<!--18. Систематические ошибки-->
             <section data-auto-animate>
                 <section data-auto-animate data-visibility>
-					<h3>Систематические ошибки</h3>
+					<h3>Систематические ошибки (дописать)</h3>
                     
 					<ul>
-                        <li>Сдвигать каты (как быть с катом P-ψ?)</li>
-                        <li>Какие ещё методы (лайклихуд)?</li>
-                        <li>Что нужно проверить?</li>
+                        <li>Систематика от отборов</li>
+                        <li>Светимость</li>
+                        <li>Триггер</li>
                     </ul>
 				</section>
                  <section data-auto-animate data-visibility>
@@ -891,14 +818,28 @@
 				</section>
 			</section>
             
+			<!--19. Заключение-->
 			<section data-auto-animate>
-				<h3>Будущие планы</h3>
-				<ul>
-					<li>Проверить поправку на эффективность ДК</li>
-					<li>Совместный анализ с e<sup>+</sup>e<sup>–</sup> ➝ K<sup>+</sup>K<sup>–</sup></li>
+				<h3>Заключение</h3>
+				
+				<div style="text-align:left; padding-top: 20px;" >
+					<h4>Результаты</h4>
+					<ul style="font-size: 0.7em; padding-left: 40px;">
+						<li>Разработаны критерии отбора процесса e<sup>+</sup>e<sup>–</sup> ➝ K<sub>S</sub>K<sub>L</sub></li>
+						<li>Вычислены эффективности регистрации, реконструкции и рад.поправки</li>
+						<li>Измерены сечения сигнального процесса</li>
+					</ul>
+				</div>
+				
+				<div style="text-align:left; padding-top: 20px;" >
+				<h4>Планы</h4>
+				<ul style="font-size: 0.7em; padding-left: 40px;">
 					<li>Определить систематические ошибки</li>
 					<li>Представить результаты работы на конференциях и т.д.</li>
+					<li>Совместный анализ с e<sup>+</sup>e<sup>–</sup> ➝ K<sup>+</sup>K<sup>–</sup></li>
 				</ul>
+				</div>
+				<h3 style="padding-top: 20px;" class="fragment">Спасибо за внимание!</h3>
 			</section>
 
 		</div>
