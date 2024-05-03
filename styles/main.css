@@ -24,6 +24,26 @@ a:visited{
     color: violet;
 }
 
+a.simple{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    line-height: 1.4;
+    transition-property: text-decoration-color;
+    transition-duration: 0.7s;
+    font-size: inherit;
+}
+
+a.simple:link{
+    color: inherit;
+}
+
+a.simple:hover{
+    color: inherit;
+    text-decoration-color: inherit;
+}
+
 p{
     font-family: 'Raleway', sans-serif;
     text-align: justify;
